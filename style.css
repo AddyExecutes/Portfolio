@@ -1,0 +1,437 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --bg-light: rgb(255, 255, 255);
+
+    --color-primary: rgb(77, 202, 135);
+
+    
+    --color-primary-low-opacity: rgba(0, 0, 0);
+    --color-primary-mid-opacity: rgba(77, 202, 135, 0.5);
+    --color-primary-high-opacity: rgba(77, 202, 135, 0.25);
+    --color-primary-full-opacity: rgba(77, 202, 135, 0);
+
+    --color-gradient-1: #0f2027;
+    --color-gradient-2: #203a43;
+    --color-gradient-3: #2c5364;
+
+    --hover-tile-bg: rgba(26, 156, 188, 0.39);
+
+
+
+    --text-light: rgb(255, 255, 255);
+    --text-muted: rgba(255, 255, 255, 0.75);
+    --text-dark: rgb(0, 0, 0);
+
+}
+
+
+@font-face {
+    font-family: "TikTok_Sans-reg";
+    src: url("Assets/Font/TikTokSans-Light.ttf") format(truetype);
+}
+
+@font-face {
+    font-family: "TikTok_Sans-sb";
+    src: url("Assets/Font/Inter-VariableFont_opsz\,wght.ttf") format(truetype);
+}
+
+@font-face {
+    font-family: "Cookie";
+    src: url("Assets/Font/Cookie-Regular.ttf") format(truetype);
+}
+
+
+
+
+html {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: "TikTok_Sans-reg";
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+body {
+    padding-bottom: 3rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+
+
+.logobar {
+    padding: 3rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.profile-img {
+    width: 30px;
+    border-radius: 10%;
+}
+
+
+
+
+.fancy-heading {
+    font-size: 3rem;
+    font-family: "Cookie";
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 1rem;
+}
+
+
+.contact-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.semi-bold {
+    font-family: "TikTok_Sans-sb";
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    width: fit-content;
+    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 780px) {
+    .button {
+        transition: 0.3s;
+    }
+    .button:hover {
+        border-radius: 1rem;
+        margin-bottom: 0.4rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+.contact-btn {
+    width: fit-content;
+}
+
+
+
+
+
+.intro-section {
+    width: 100vw;
+    height: fit-content;
+    padding: 3rem 5rem;
+    /* background: linear-gradient(to bottom, var(--color-gradient-1), var(--color-gradient-2), var(--color-gradient-3)); */
+    background: linear-gradient(180deg, var(--color-primary-low-opacity), var(--color-primary-high-opacity));
+
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.white {
+    color: white;
+}
+
+.large-heading {
+    font-family: "TikTok_Sans-sb";
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+.typing {
+  border-right: 2px solid rgb(0, 0, 0);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: rgb(255, 255, 255); }
+  50% { border-color: transparent; }
+}
+
+
+
+
+
+
+
+.profession-container {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.profession-title-container, .profession-info-container {
+    padding: 1rem 0rem;
+}
+
+
+.profession-info-text {
+    color: var(--text-muted);
+}
+
+
+.about-me-btn {
+    width: fit-content;
+}
+
+.skills-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5rem;
+    box-sizing: border-box;
+}
+
+.skill-stack-heading {
+    padding: 0.6rem 0rem;
+}
+
+.skill-list-container {
+    list-style: none;
+    display: flex;
+}
+
+.skill-img {
+    width: 30px;
+    padding: 0.4rem;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.skill-img:hover {
+    background-color: var(--hover-tile-bg);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+.quote-container {
+    padding: 2rem 0rem;
+}
+
+.specs-title {
+    padding: 0.6rem 0rem;
+}
+
+.specs-item {
+    list-style: none;
+    transition: 0.2s;
+    padding: 0.2rem;
+}
+
+.specs-item:hover {
+    background-color: var(--hover-tile-bg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.projcta-btn {
+    margin-top: 0.6rem;
+}
+
+
+
+
+
+
+.about-section {
+    background: linear-gradient(180deg, var(--color-primary-high-opacity), var(--color-primary-full-opacity));
+    width: 100vw;
+    height: fit-content;
+    padding: 0rem 5rem;
+    box-sizing: border-box;
+}
+
+.about-heading-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.medium-heading {
+    font-family: "TikTok_Sans-sb";
+    font-size: 1.8rem;
+}
+
+.portfoliocta {
+    margin-left: 1rem;
+}
+
+
+.about-info-container {
+    display: flex;
+    /* padding-top: 3rem; */
+    padding: 3rem 0rem;
+}
+
+.about-img {
+    width: 200px;
+    border-radius: 7%;
+    transition: 0.5s;
+}
+
+.about-img:hover {
+    transform: scale(1.1)
+}
+
+.about-about-container {
+    padding-left: 5rem;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-read-btn {
+    margin-top: 0.6rem;
+}
+
+
+
+
+
+
+.portfolio-section {
+    background-color: var(--bg-light);
+    width: 100vw;
+    height: fit-content;
+    padding: 0rem 5rem;
+    box-sizing: border-box;
+}
+
+.ptf-heading-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.uc-note {
+    display: flex;
+    color: var(--color-primary);
+    flex-direction: column; /* remove this, only to demonstrated 'under-construction' note */
+    align-items: center; /* remove this, only to demonstrated 'under-construction' note */
+}
+
+
+
+
+
+/* for mobile phones */
+@media (max-width: 780px) {
+
+    .logobar {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .contact-btn-container {
+        width: 100vw;
+        margin-top: 1rem;
+    }
+
+    .large-heading {
+        font-size: 1.8rem;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .profession-container {
+        width: 100%;
+    }
+
+    .skills-container {
+        width: 100%;
+        padding-left: 0rem;
+        padding-top: 3rem;
+        align-items: center;
+    }
+
+
+
+
+    .about-section {
+        padding: 0rem 1rem;
+    }
+
+    .about-info-container {
+        padding: 0rem;
+        padding-top: 3rem;
+    }
+
+    .about-about-container {
+        padding-left: 2rem;
+    }
+
+
+}
+
+
+
+@media (max-width: 500px) {
+
+    .about-heading-container {
+        padding: 3rem 0rem;
+    }
+
+    .medium-heading {
+        font-size: 1.2rem;
+    }
+
+    .about-info-container {
+        flex-direction: column;
+    }
+
+    .about-img-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-about-container {
+        width: 80vw;
+        padding-left: 0rem;
+        padding-top: 2rem;
+    }
+}
